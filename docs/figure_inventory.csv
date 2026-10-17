@@ -1,0 +1,35 @@
+﻿filename,content,cell_index_0based
+fig_1a.png,qPCR Acta2 / day14・28,22
+fig_1b.png,qPCR Col1a1 / day14・28,23
+fig_2e.png,異常パッチ比率 / TAA・MDA、day7・14・28,124
+fig_4a,FACS META可視化（拡張子省略）,67
+fig_5a.png,RNA-seq META可視化 / 群・日数,91
+fig_5b.png,RNA-seq META可視化 / ALT,93
+fig_5c_1.png,GAGE / RESPONSE_TO_INTERLEUKIN_17,117
+fig_5c_2.png,GAGE / FIBRINOLYSIS,117
+fig_s1.png,飲水量推移,121
+fig_s2.png,モデル構築 ALT推移,13
+fig_4b_1.png,CD4T,45
+fig_4b_2.png,Neutrophil,45
+fig_4b_3.png,Eosinophil,45
+fig_4b_4.png,CD8T,45
+fig_s3_1.png,ALT,30
+fig_s3_2.png,AST,31
+fig_s3_3.png,ALP,33
+fig_s3_4.png,TBIL,34
+fig_s3_5.png,TCHO,35
+fig_s3_6.png,HDL,36
+fig_s3_7.png,TG,37
+fig_s4_1.png,gdT,46
+fig_s4_2.png,NKT,46
+fig_s4_3.png,NK,46
+fig_s4_4.png,B,46
+fig_s4_5.png,Monocyte,46
+fig_s4_6.png,MonMac,46
+fig_s4_7.png,Kupffer,46
+fig_s5_1.png,RNA-seq PCA log,75
+fig_s5_2.png,RNA-seq MDS,77
+fig_s5_3.png,RNA-seq t-SNE perplexity=10,78
+fig_s5_4.png,RNA-seq UMAP neighbors=10,79
+fig_s5_5.png,RNA-seq SpectralEmbedding neighbors=20,81
+fig_s5_6.png,RNA-seq LLE neighbors=20,83
