@@ -20,14 +20,16 @@ If you have any questions or comments, please feel free to create an issue on gi
 
 ## Repository structure
 
-The latest version of the paper figures is `2609_fig/main_fig.ipynb`. `legacy/fig_submisson_HEandAD.ipynb` is kept as a reference for the histopathological image analysis, which is the source of the abnormal patch ratios shown in Fig 2e. The statistical analyses, plotting code, figure names, and saved cell outputs have not been changed, except that the package installation log at the top of the HEandAD notebook has been removed.
+The final figure-generation notebooks are grouped in `notebooks/`; see [notebooks/README.md](notebooks/README.md) for their roles. The original environment record is in `environment/env.txt`.
+
+The latest version of the paper figures is `notebooks/main_fig.ipynb`. `notebooks/fig_submisson_HEandAD.ipynb` is kept as a reference for the histopathological image analysis, which is the source of the abnormal patch ratios shown in Fig 2e. The statistical analyses, plotting code, figure names, and saved cell outputs have not been changed, except that the package installation log at the top of the HEandAD notebook has been removed.
 
 | Notebook | Role | Figure output directory |
 | --- | --- | --- |
-| `2609_fig/main_fig.ipynb` | Figures of the latest version of the paper | `results/main_fig/` |
-| `legacy/fig_submisson_HEandAD.ipynb` | Anomaly detection and patch extraction on histopathology images | `results/legacy/HEandAD/` |
+| `notebooks/main_fig.ipynb` | Figures of the latest version of the paper | `results/main_fig/` |
+| `notebooks/fig_submisson_HEandAD.ipynb` | Anomaly detection and patch extraction on histopathology images | `results/histopathology/` |
 
-Figure file names and save settings are unchanged. See `docs/figure_inventory.csv` for the list of figures. The `results/` directories are created when the notebooks are run; the figures have not been regenerated for this release.
+Figure file names and save settings are unchanged. See `notebooks/figure_inventory.csv` for the list of figures. The `results/` directories are created when the notebooks are run; the figures have not been regenerated for this release.
 
 ## Running the notebooks
 
@@ -38,15 +40,15 @@ import os
 os.chdir("/path/to/MDAdrinkingwater")
 ```
 
-In `2609_fig/main_fig.ipynb`, `data_root` still points to the original absolute path used during the analysis. To use the files in this repository, set `data_root` to the `data/` directory of this repository (for example, `data_root = str(project_root / "data")`).
+In `notebooks/main_fig.ipynb`, `data_root` points to the repository `data/` directory. Inputs are read from `raw/` and `references/`; generated statistics tables are saved in `results/tables/`.
 
-The latest notebook uses the bundled `2609_fig/utils/`. The external dependencies of the histopathology notebook are described in `data/README.md`. `2609_fig/env.txt` is the `pip list` output of the original environment and is kept as a record; it is not a lock file.
+The latest notebook uses the bundled `notebooks/utils/`. The external dependencies of the histopathology notebook are described in `data/README.md`. `environment/env.txt` is the `pip list` output of the original environment and is kept as a record; it is not a lock file.
 
 ## Saved outputs
 
-Saved outputs, execution counts, and cell order are preserved. They are the results of the original runs. Re-running in the current environment and reproducing identical figures has not been verified. The notebooks can be viewed without clearing outputs or re-running.
+Figure outputs, execution counts, and cell order are preserved; the previously removed HEandAD installation log is the exception. They are the results of the original runs. Re-running in the current environment and reproducing identical figures has not been verified. The notebooks can be viewed without clearing outputs or re-running.
 
-Known inconsistencies are described in the "Known data error" and "Known inconsistency" sections at the end of this README. To keep the published figures intact, the notebooks have not been modified.
+Known inconsistencies are described in the "Known data error" and "Known inconsistency" sections at the end of this README. To keep the published figures intact, the analysis and plotting code have not been modified; path settings have been updated.
 
 ## Data
 
@@ -59,7 +61,7 @@ All inputs required by the latest notebook are included in `data/`. Note that th
 
 ## Known data error (BW, ALT, and AST of MDA day 1)
 
-In `230528_DrinkingWaterModel_rawdata_v2.csv` and `230605_data_blood_facs.csv`, the BW, ALT, and AST values of 1M1–1M6 (MDA day 1) were mistakenly copied from 1T1–1T6 (TAA day 1). The correct values are given in `240111_DrinkingWaterModel_rawdata_v6.csv` and `2610_all_data.csv`. See [docs/metadata_value_differences.csv](docs/metadata_value_differences.csv) for the differences between the two sets of files.
+In `230528_DrinkingWaterModel_rawdata_v2.csv` and `230605_data_blood_facs.csv`, the BW, ALT, and AST values of 1M1–1M6 (MDA day 1) were mistakenly copied from 1T1–1T6 (TAA day 1). The correct values are given in `240111_DrinkingWaterModel_rawdata_v6.csv` and `2610_all_data.csv`. See [data/metadata_value_differences.csv](data/metadata_value_differences.csv) for the differences between the two sets of files.
 
 To keep the correspondence with the published analyses and figures, the files containing the error are provided as is.
 
@@ -70,9 +72,9 @@ When using BW, ALT, or AST in a new analysis, use the values in `240111_Drinking
 
 ## Known inconsistency (samples 24 and 25 in Fig 2e)
 
-The order of histopathology slides No. 24 and No. 25 was swapped when the images were acquired. The correct assignment is No. 24 = MDA day 7 and No. 25 = TAA day 28. `legacy/fig_submisson_HEandAD.ipynb` swaps the groups of these two samples accordingly. Fig 2e, the patch PCA, and the extracted patch images use the same (correct) assignment.
+The order of histopathology slides No. 24 and No. 25 was swapped when the images were acquired. The correct assignment is No. 24 = MDA day 7 and No. 25 = TAA day 28. `notebooks/fig_submisson_HEandAD.ipynb` swaps the groups of these two samples accordingly. Fig 2e, the patch PCA, and the extracted patch images use the same (correct) assignment.
 
-In contrast, the "ad p val" cell in `2609_fig/main_fig.ipynb` does not reflect this swap and performs one-sided t-tests treating No. 24 as TAA day 28 and No. 25 as MDA day 7. Therefore, the t and p values printed by that cell for TAA day 28 and MDA day 7 differ from those printed by the Fig 2e plotting cell.
+In contrast, the "ad p val" cell in `notebooks/main_fig.ipynb` does not reflect this swap and performs one-sided t-tests treating No. 24 as TAA day 28 and No. 25 as MDA day 7. Therefore, the t and p values printed by that cell for TAA day 28 and MDA day 7 differ from those printed by the Fig 2e plotting cell.
 
 | Group | "ad p val" cell (incorrect) | Fig 2e plotting cell (correct) |
 | --- | --- | --- |
@@ -83,4 +85,9 @@ The significance decisions (α=0.05) are the same in both cases, so the asterisk
 
 ## Known inconsistency (y-axis labels of Fig S3-1 and S3-2)
 
-For Fig S3-1 (ALT) and S3-2 (AST) in `2609_fig/main_fig.ipynb`, `"ALP (U/l)"` is passed as the `title` argument of `value_plot`, so the y-axis label of the saved figures reads "ALP (U/l)". The plotted values are ALT and AST, respectively, as indicated by the figure titles, and the correct y-axis labels are "ALT (U/l)" and "AST (U/l)". The plotted values and statistical analyses are not affected. To keep the saved outputs intact, the notebook has not been modified.
+For Fig S3-1 (ALT) and S3-2 (AST) in `notebooks/main_fig.ipynb`, `"ALP (U/l)"` is passed as the `title` argument of `value_plot`, so the y-axis label of the saved figures reads "ALP (U/l)". The plotted values are ALT and AST, respectively, as indicated by the figure titles, and the correct y-axis labels are "ALT (U/l)" and "AST (U/l)". The plotted values and statistical analyses are not affected. To keep the saved outputs intact, the notebook has not been modified.
+
+
+## Data organization
+
+`data/raw/` preserves source files. `data/processed/` provides English-documented, reuse-ready copies. `data/references/` holds gene sets. See [data/README.md](data/README.md) for paths and provenance. Raw means preserved source files, not necessarily unprocessed measurements.

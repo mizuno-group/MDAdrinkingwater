@@ -1,0 +1,17 @@
+column,source_column,description,unit_status
+record_number,No.,Record number,Not applicable
+sample_id,ID,Sample identifier,Not applicable
+group,group,Experimental group,Not applicable
+day,day,Day category; origin unconfirmed,Not confirmed in source CSV
+body_weight,BW,Body weight,Not confirmed in source CSV
+alt,ALT,Alanine aminotransferase,Not confirmed in source CSV
+ast,AST,Aspartate aminotransferase,Not confirmed in source CSV
+total_bilirubin,TBIL,Total bilirubin,Not confirmed in source CSV
+total_cholesterol,TCHO,Total cholesterol,Not confirmed in source CSV
+hdl_cholesterol,HDL,HDL cholesterol,Not confirmed in source CSV
+triglycerides,TG,Triglycerides,Not confirmed in source CSV
+alkaline_phosphatase,ALP,Alkaline phosphatase,Not confirmed in source CSV
+ggt,GGT,Gamma-glutamyltransferase,Not confirmed in source CSV
+ggt_qualifier,GGT_at,@ denotes the lower quantification limit,Not applicable
+drinking_water_batch,water batch,"Drinking-water preparation batch, not dose",Not applicable
+rnaseq_id,rnaseq_file,RNA-seq DRR ID; No File means no corresponding RNA-seq data,Not applicable

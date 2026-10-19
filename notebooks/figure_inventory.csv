@@ -1,0 +1,35 @@
+notebook,filename,content,cell_index_0based
+notebooks/main_fig.ipynb,fig_1a.png,qPCR Acta2 / days 14 and 28,22
+notebooks/main_fig.ipynb,fig_1b.png,qPCR Col1a1 / days 14 and 28,23
+notebooks/main_fig.ipynb,fig_2e.png,"Abnormal patch ratio / TAA and MDA, days 7, 14 and 28",124
+notebooks/main_fig.ipynb,fig_4a,FACS META visualization (filename extension omitted),67
+notebooks/main_fig.ipynb,fig_5a.png,RNA-seq META visualization / group and day,91
+notebooks/main_fig.ipynb,fig_5b.png,RNA-seq META visualization / ALT,93
+notebooks/main_fig.ipynb,fig_5c_1.png,GAGE / RESPONSE_TO_INTERLEUKIN_17,117
+notebooks/main_fig.ipynb,fig_5c_2.png,GAGE / FIBRINOLYSIS,117
+notebooks/main_fig.ipynb,fig_s1.png,Drinking-water intake over time,121
+notebooks/main_fig.ipynb,fig_s2.png,ALT over time / model construction,13
+notebooks/main_fig.ipynb,fig_4b_1.png,CD4T,45
+notebooks/main_fig.ipynb,fig_4b_2.png,Neutrophil,45
+notebooks/main_fig.ipynb,fig_4b_3.png,Eosinophil,45
+notebooks/main_fig.ipynb,fig_4b_4.png,CD8T,45
+notebooks/main_fig.ipynb,fig_s3_1.png,ALT,30
+notebooks/main_fig.ipynb,fig_s3_2.png,AST,31
+notebooks/main_fig.ipynb,fig_s3_3.png,ALP,33
+notebooks/main_fig.ipynb,fig_s3_4.png,TBIL,34
+notebooks/main_fig.ipynb,fig_s3_5.png,TCHO,35
+notebooks/main_fig.ipynb,fig_s3_6.png,HDL,36
+notebooks/main_fig.ipynb,fig_s3_7.png,TG,37
+notebooks/main_fig.ipynb,fig_s4_1.png,gdT,46
+notebooks/main_fig.ipynb,fig_s4_2.png,NKT,46
+notebooks/main_fig.ipynb,fig_s4_3.png,NK,46
+notebooks/main_fig.ipynb,fig_s4_4.png,B,46
+notebooks/main_fig.ipynb,fig_s4_5.png,Monocyte,46
+notebooks/main_fig.ipynb,fig_s4_6.png,MonMac,46
+notebooks/main_fig.ipynb,fig_s4_7.png,Kupffer,46
+notebooks/main_fig.ipynb,fig_s5_1.png,RNA-seq PCA log,75
+notebooks/main_fig.ipynb,fig_s5_2.png,RNA-seq MDS,77
+notebooks/main_fig.ipynb,fig_s5_3.png,RNA-seq t-SNE perplexity=10,78
+notebooks/main_fig.ipynb,fig_s5_4.png,RNA-seq UMAP neighbors=10,79
+notebooks/main_fig.ipynb,fig_s5_5.png,RNA-seq SpectralEmbedding neighbors=20,81
+notebooks/main_fig.ipynb,fig_s5_6.png,RNA-seq LLE neighbors=20,83
